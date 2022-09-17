@@ -26,5 +26,16 @@ int main(int argc, char** argv) {
         draw(s);
     }
 
+    std::vector<Entity> entities;
+    entities.push_back(Entity{});
+    for (const auto& e : entities) {
+        draw(e);
+    }
+
+    for (auto& e : entities) {
+        update(e);
+        draw(e);
+    }
+
     return 0;
 }

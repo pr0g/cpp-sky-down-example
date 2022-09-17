@@ -19,3 +19,17 @@ struct Triangle {
         std::cout << "triangle\n";
     }
 };
+
+void poly_extend(Draw, const Triangle& tri) {
+    std::cout << "other triangle\n";
+}
+
+struct Entity {
+    void update() {
+        health_--;
+    }
+    void draw() const {
+        std::cout << "entity (health " << health_ << ")\n";
+    }
+    int health_ = 100;
+};
